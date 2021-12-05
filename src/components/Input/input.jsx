@@ -42,7 +42,6 @@ class InputForm extends React.Component {
       default:
         break;
     }
-    console.log(dirValid,extensionValid);
     this.setState(
       {
         formErrors: fieldValidationErrors,
