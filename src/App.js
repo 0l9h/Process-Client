@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import InputForm from "./component/input";
+import InputForm from "./components/Input/input.jsx";
 import React from "react";
 import Table from './components/Table/Table.jsx'
 import $ from "jquery";
