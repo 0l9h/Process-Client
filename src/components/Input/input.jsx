@@ -25,7 +25,7 @@ class InputForm extends React.Component {
   validateField(fieldName, value) {
     let fieldValidationErrors = this.state.formErrors;
     let dirValid = this.state.dirValid;
-    let extensionValid = this.state.extensiontValid;
+    let extensionValid = this.state.extensionValid;
     switch (fieldName) {
       case "dir":
         dirValid = value.match(/^[a-zA-Z]:\\[\\\S|*\S]?.*$/g);
