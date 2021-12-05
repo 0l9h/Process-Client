@@ -11,10 +11,10 @@ class App extends React.Component {
   handleClick = (userInput) => {
       userInput.dir.replace("\\",/\\/);    
       $.ajax("http://localhost:30629/api/FilesInfo", {
-      data: {
+      data: JSON.stringify({
         Path: userInput.dir,
         Extension: userInput.extension,
-      },
+      }),
       type: "POST",
       success: (data) => {
         $("#table").html(<Table files={data.files} totalSize={data.totalSize}/>)
