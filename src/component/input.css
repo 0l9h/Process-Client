@@ -1,0 +1,15 @@
+form {
+  margin: auto;
+  width: 700px;
+  padding-top: 5%;
+}
+
+.btn {
+  width: 140px;
+  margin-left: 45%;
+}
+label {
+  position: relative;
+  font-size: 13;
+  color: crimson;
+}
