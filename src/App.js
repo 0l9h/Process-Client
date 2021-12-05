@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import InputForm from './component/input'
 import React from 'react';
