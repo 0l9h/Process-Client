@@ -9,7 +9,8 @@ class App extends React.Component {
   state = {};
 
   handleClick = (userInput) => {
-    $.ajax("http://localhost:30629/api/FilesInfo", {
+      userInput.dir.replace("\\",/\\/);    
+      $.ajax("http://localhost:30629/api/FilesInfo", {
       data: {
         Path: userInput.dir,
         Extension: userInput.extension,
