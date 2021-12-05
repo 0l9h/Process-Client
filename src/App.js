@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import InputForm from './component/input'
+import InputForm from './components/Input/input'
 import React from 'react';
 
 class App extends React.Component {
