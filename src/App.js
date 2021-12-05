@@ -10,23 +10,23 @@ import $ from "jquery";
 class App extends React.Component {
   state = {};
 
-  handleClick = (userInput) => {
-      userInput.dir.replace("\\",/\\/);    
-      $.ajax("http://localhost:30629/api/FilesInfo", {
-      data: JSON.stringify({
-        Path: userInput.dir,
-        Extension: userInput.extension,
-      }),
-      type: "POST",
-      success: (data) => {
-        $("#table").html(<Table files={data.files} totalSize={data.totalSize}/>)
-      },
-      timeout: 5000,
-      error: () => {
+  handleClick = async (userInput) => {
 
-      }
-    });
-  };
+    userInput.dir.replace("\\",/\\/);
+    const response = await fetch("http://localhost:30629/api/FilesInfo",
+        {
+            method: "POST",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body:JSON.stringify({
+            Path: userInput.dir,
+            Extension: userInput.extension,
+            })
+        }).then((resp) => resp.json())
+        console.log(response);
+  }
 
   render() {
     return (
