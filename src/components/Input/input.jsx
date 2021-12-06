@@ -33,7 +33,7 @@ class InputForm extends React.Component {
         this.setState({ dirChanged: true });
         break;
       case "extension":
-        extensionValid = value.match(/^\*\.[0-9a-z]*$/);
+        extensionValid = value.match(/^\*\.((\*)|([a-z0-9]+)){1}$/);
         fieldValidationErrors.extension = extensionValid
           ? ""
           : "Invalid file extension";
