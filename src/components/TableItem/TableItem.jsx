@@ -6,7 +6,7 @@ const TableItem = (props) => {
     <tr>
       <th scope="row">{props.id}</th>
       <td>{props.file.name}</td>
-      <td>{props.file.size}</td>
+      <td>{props.file.size} Bytes</td>
       <td>{props.file.creationDate}</td>
     </tr>
   );

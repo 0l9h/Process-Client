@@ -17,15 +17,15 @@ const Table = (props) => {
         </thead>
         <tbody>
           {files.map((file, i) => (
-            <TableItem id={i} file={file} />
+            <TableItem id={i+1} file={file} />
           ))}
         </tbody>
       </table>
       <input
         className="form-control text-center"
         type="text"
-        value={props.totalSize+" kBytes"}
-        aria-label={props.totalSize+" kBytes"}
+        value={props.totalSize+" Bytes"}
+        aria-label={props.totalSize+" Bytes"}
         disabled
         readonly
       ></input>
